@@ -49,7 +49,7 @@ public class MovementManager : MonoBehaviour
 
         if (jumpInput)
         {
-            _rigidbody2D.AddForce(Vector2.up * jumpForce);
+            _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpInput = false;
         }
     }
